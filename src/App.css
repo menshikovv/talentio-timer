@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  z-index: 10001;
+}
+
+.timer-compact {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: calc(16px + 2vw);
+  
+  font-size: clamp(
+    1.5rem,
+    calc(1rem + 3vw),
+    3rem
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.countdown-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.facts-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.facts {
+  text-align: center;
+  max-width: 600px;
+}
+
+.facts h3 {
+  margin-bottom: 0.5rem;
+}
+
+.fact-text {
+  font-size: 1rem;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
